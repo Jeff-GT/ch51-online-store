@@ -1,0 +1,14 @@
+.footerSet{
+   background-color: rgb(42, 62, 66);
+   color: white;
+   font-weight: bold;
+   height: 125px;
+   display: flex;
+   align-items: center;
+   letter-spacing: 1px;
+}
+
+.footerItem{
+   margin-left: auto;
+   margin-right: auto;
+}
