@@ -6,23 +6,29 @@
    align-items: center;
 }
 
+.nav-pos{
+   position: fixed;
+   top: 0;
+}
+
+.nav-width{
+   
+   width: 100vw;
+}
+
+
 body{
    background-color: lightgray;
 }
 
-a{
-   text-transform: uppercase;
-   font-size: 18px;
-   color: rgb(5, 56, 77);
-   letter-spacing: 1px;
-   font-weight: bolder;
-   text-decoration: none;
-}
-
-a:hover{
-   color: red;
-}
 
 .navbar-color{
-   background-color: rgb(24, 138, 138);
+   background-color: rgb(51, 92, 92);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico');
+
+.nav-title-font{
+      font-family: "Pacifico", cursive;
+      font-weight: 1; 
 }
