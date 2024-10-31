@@ -9,7 +9,7 @@ function Quantity_Picker(props){
       console.log("Increasing");
       const val = quantity+1; 
       setQuantity(val);
-      props.onChange(val);
+      props.testMethod(val);
    }
 
    function decrease(){
@@ -17,7 +17,7 @@ function Quantity_Picker(props){
 
          const val=quantity-1;
          setQuantity(val);
-         props.onChange(val);
+         props.testMethod(val);
       }
    }
    return(
@@ -26,7 +26,8 @@ function Quantity_Picker(props){
 
             <button className='btn btn-sm btn-outline-dark' onClick={decrease} disabled={quantity==1}>-</button>
             <label>{quantity}</label>
-            <button className='btn btn-sm btn-outline-dark' onClick={increase}>+</button>
+            <button className='btn btn-sm btn-outline-dark' 
+            onClick={increase}>+</button>
             
 
       </div>

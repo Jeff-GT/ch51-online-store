@@ -1,0 +1,26 @@
+.home{
+   min-height: calc(100vh - 109px);
+   margin-top: 58px;
+   background: rgb(44,75,60);
+   background: linear-gradient(177deg, rgba(44,75,60,1) 0%, rgba(41,117,116,1) 35%, rgba(210,167,72,1) 100%);
+   color: white;
+}
+
+
+
+.home-topper{
+   background: white;
+   padding: 10px;
+   width: 95%;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+
+.home ul{
+   display: flex;
+   justify-content: center;
+   margin-left: auto;
+   margin-right: auto;
+   
+}

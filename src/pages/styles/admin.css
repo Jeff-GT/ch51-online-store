@@ -1,0 +1,34 @@
+.admin{
+   min-height: calc(100vh - 109px);
+   margin-bottom: 500px;
+   margin-top: 100px;
+}
+
+.product-adder{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+
+.product-mngr{
+   border: 1px solid black;
+   border-radius: 5%;
+   margin: 10px;
+   padding: 10px;
+   height: 350px;
+   width: 30%;
+   align-content: center;
+}
+
+.coupons{
+   border: 1px solid black;
+   border-radius: 5%;
+   margin: 10px;
+   padding: 10px;
+   height: 250px;
+   height: 350px;
+   align-content: center;
+   width: 30%;
+}

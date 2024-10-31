@@ -1,13 +1,17 @@
+import DataContext from '../state/dataContext';
 import Quantity_Picker from './quanitityPicker';
 import './styles/product.css'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 
 function Product(props){
    const [quantity, setQuantity] = useState(1);
 
+   let globalAddToCart = useContext(DataContext).addToCart;
+
    function add(){
-      console.log("Message");
+      let prodInHand = {...props.data, quantity:quantity}
+      globalAddToCart(prodInHand);
       
    }
    
@@ -31,7 +35,7 @@ function Product(props){
             <label className='font'>${parseFloat(props.data.price).toFixed(2)}</label>
          </div>
          
-         <Quantity_Picker onChange={handleQuantity}></Quantity_Picker>
+         <Quantity_Picker testMethod={handleQuantity}></Quantity_Picker>
 
          <button className='btn btn-sm btn-success' onClick={add}>Add</button>
          <div>

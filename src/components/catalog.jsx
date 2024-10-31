@@ -1,62 +1,63 @@
+import "./styles/catalog.css";
+import Product from "../pages/product";
+import DataService from "../services/dataService";
+import { useState, useEffect } from "react";
 
-import './styles/catalog.css';
-import Product from '../pages/product';
-import DataService from '../services/dataService';
-import { useState, useEffect } from 'react'
+function Catalog() {
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
 
-function Catalog(){
-   
-   const[products, setProducts] = useState([])
-   const [categories, setCategories] = useState([])
+  useEffect(function () {
+    loadCatalog();
+    loadCategories();
+  }, []);
 
-   useEffect(function(){
-      loadCatalog();
-   },[]);
+  function loadCatalog() {
+    let service = new DataService();
+    let prods = service.getProducts();
+    setProducts(prods);
+  }
 
-   function loadCatalog(){
-      let service = new DataService();
-      let prods = service.getProducts();
-      setProducts(prods);
-   }
+  function loadCategories() {
+    let service = new DataService();
+    let cats = service.getCategories();
+    setCategories(cats);
+  }
 
-   function loadCategories(){
-      let service = new DataService();
-      let cats = service.getCategories();
-      setCategories(cats);
-   }
+  function applyFilter(category) {
+    setSelectedCategory(category);
+  }
 
-   return (
+  return (
+    <div className="catalog page">
+      <br />
+      <h3 className="top-msg">
+        We have {products.length} new Products for you!
+      </h3>
 
-      
-      <div className='catalog'> 
-         <br/>
-         <h3 className='top-msg'>We have {products.length} new Products for you!</h3> 
-
-         <div className='catalog-controller'> 
-            <div className='filters'>{categories.map(cat => <button></button>)}</div>
-            <br/>
-            <div className='products'>
-               {
-
-                  products.map((item)=>(
-                     <Product key={item._id} data={item}></Product>
-                  ))
-               
-
-               /* <Product name="Title 1" price="3.99"/>
-               <Product name="Title 2" price="2.99"/>
-               <Product name="Title 3" price="5.99"/>
-               <Product name="Title 4" price="100.99"/> */}
-            </div>
-
-            {/* <div className='cart'>
-               <div>Cart</div>
-            </div> */}
-         </div>
-
+      <div className="filters">
+        {categories.map((cat) => (
+          <button
+            onClick={() => applyFilter(cat)}
+            className="btn btn-sm btn-outline-success"
+          >
+            {cat}
+          </button>
+        ))}
       </div>
 
-   );
+      <div className="catalog-controller">
+        {products
+          .filter(
+            (prod) => prod.category === selectedCategory || !selectedCategory
+          )
+          .map((item) => (
+            <Product key={item._id} data={item}></Product>
+          ))}
+      </div>
+    </div>
+  );
 }
 
 export default Catalog;
