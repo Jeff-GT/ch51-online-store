@@ -7,23 +7,29 @@ function Home(){
    
    return(
       <div className="home page">
-         <div>
+         
 
-            <div className='home-topper'>  
-               <img src="https://object-storage.shipt.com/cms/ExpertShoppers_702a9895337b6905e71e4efb38d85dd4.png?fio=true&auto=webp&format=pjpg&quality=75%2C75&width=1920" alt="" />
-            </div> 
-            <h1>Jeff's Produce</h1>
-            <h3>Your one stop shop for everything Produce.</h3>
+         <div className='home-topper'>  
+            <div className='home-content'>
+            
+               <h1>Jeff's Produce</h1>
+               <h3>Your one stop shop for everything Produce.</h3>
+               <img src="/img/peach-img.jpg" alt="" />
+               <img src="/img/eggplant.jpg" alt="" />
+               <img src="/img/kiwi.jpg" alt="" />
+               <img src="/img/bitter-mel.jpg" alt="" />
+               <ul>
+                  <li>
+                  <Link className="homeLink" to="/catalog">- Start Shopping -</Link>
+                  </li>
+                  <li>
+                     <Link className="homeLink" to="/About">- About Us -</Link>
+                  </li>
+               </ul>
+         </div>
          </div>
 
-         <ul>
-            <li className="nav-item">
-               <Link to="/catalog">- Start Shopping -</Link>
-            </li>
-            <li className="nav-item">
-               <Link  to="/About">- About Us -</Link>
-            </li>
-         </ul>
+         
       </div>
    );
 }

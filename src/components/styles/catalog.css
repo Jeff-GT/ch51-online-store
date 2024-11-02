@@ -1,10 +1,20 @@
 .catalog{
-   /* min-height: calc(100vh - 109px);
-   margin-bottom: 500px; */
+   background-image: url(/public/img/white-calico-fabric-cloth-background-texture_49683-5404.jpg);
+   background-size: cover;
 }
 
 .top-msg{
    margin-top: 58px;
+   color: rgb(92, 104, 89);
+}
+
+.cat-chooser{
+   background-color: rgb(184, 146, 63) !important;
+   margin: 2px;
+}
+
+.cat-chooser:hover{
+   background-color: rgb(231, 167, 29) !important;
 }
 
 /* .products{

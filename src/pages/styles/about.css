@@ -1,5 +1,6 @@
 .about{
    min-height: calc(100vh - 109px);
-   margin-bottom: 500px;
-   margin-top: 100px;
+   margin-top: 55px;
+   background-image: url(/public/img/white-calico-fabric-cloth-background-texture_49683-5404.jpg);
+   background-size: cover;
 }

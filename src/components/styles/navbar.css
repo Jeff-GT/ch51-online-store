@@ -23,7 +23,7 @@ body{
 
 
 .navbar-color{
-   background-color: rgb(51, 92, 92);
+   background-color: #536344;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico');
@@ -43,6 +43,16 @@ body{
 .cart-ico img{
    width: 40px;
 }
+
+.cart-btn{
+   color: rgba(231, 231, 231, .8) !important;
+}
+
+.cart-btn:hover   {
+   background-color: #7c9465 !important;
+}
+
+
 
 .right{
    margin-right: 25px;

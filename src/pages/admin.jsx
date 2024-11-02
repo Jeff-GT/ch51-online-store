@@ -54,14 +54,15 @@ function Admin() {
 
   return (
     <div className="admin">
+      <h1>Admin Page</h1>
       <div className="product-adder">
         <div className="product-mngr">
-          <form action="">
+          <form action="" className="form-label">
             
           <h3>Add Product</h3>
-            <div>
-              <label htmlFor="" className="form-label"
-              >
+            <div >
+              <label htmlFor="">
+              
                 Title
               </label>
               <input name="title" className="form-control" 
@@ -96,7 +97,7 @@ function Admin() {
           <button className="btn btn-outline-dark">Save Product</button>
         </div>
 
-        <div className="coupons">
+        <div className="coupons form-label">
           <h3>Manage Coupon</h3>
           <form action="">
             <div>

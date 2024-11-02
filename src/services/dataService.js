@@ -4,7 +4,7 @@ const catalog=[
 
 {
    "title":"Peach",
-   "image":"https://blog.sakura.co/wp-content/uploads/2022/03/shutterstock_675217411-1.png",
+   "image": "img/peach-img.jpg",
    "price":"12.99",
    "category":"East",
    "_id":"121231",
@@ -12,7 +12,7 @@ const catalog=[
 
 {
    "title":"Banana",
-   "image":"https://www.foodandwine.com/thmb/4fzQW9u60XlhTk52CIuM1BlLhcc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/amazonfreebananas-em-86304874-2000-5a276309cf1944349fb55818c98c7b1b.jpg",
+   "image": "img/banana-img.jpg",
    "price":"15.99",
    "category":"Fruit",
    "_id":"121232",
@@ -29,7 +29,7 @@ const catalog=[
 
 {
    "title":"Egg Plant",
-   "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Solanum_melongena_24_08_2012_%281%29.JPG/1200px-Solanum_melongena_24_08_2012_%281%29.JPG",
+   "image": "img/eggplant.jpg",
    "price":"12.99",
    "category":"Vegetable",
    "_id":"121234",
@@ -37,7 +37,7 @@ const catalog=[
 
 {
    "title":"Mango",
-   "image":"https://www.cleanjuice.com/wp-content/uploads/2023/06/clean_juice_mango_benefits_hero-3-scaled-1.jpeg",
+   "image":"img/mango.jpg",
    "price":"22.99",
    "category":"Fruit",
    "_id":"121235",
@@ -45,7 +45,7 @@ const catalog=[
 
 {
    "title":"Jack Fruit",
-   "image":"https://rolandfoods.com/assets/news/GettyImages-823672534.jpg",
+   "image":"img/jackfruit.jpg",
    "price":"12.99",
    "category":"Fruit",
    "_id":"121236",
@@ -53,7 +53,7 @@ const catalog=[
 
 {
    "title":"Durian",
-   "image":"https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/18/whole-and-halved-durian-fruit-high-angle-on-wooden-boards.jpg.rend.hgtvcom.1280.960.suffix/1702934646286.jpeg",
+   "image":"img/durian.jpg",
    "price":"32.99",
    "category":"Fruit",
    "_id":"121237",
@@ -61,20 +61,84 @@ const catalog=[
 
 {
    "title":"Coconut",
-   "image":"https://parachutekalpavriksha.org/cdn/shop/articles/Sure_ways_to_keep_the_coconut_tree_healthy.jpg?v=1711267599&width=2048",
+   "image":"img/coconut.jpg",
    "price":"12.99",
    "category":"Fruit",
    "_id":"121238",
 },
 
 {
-   "title":"Bitte Gourd",
-   "image":"https://m.media-amazon.com/images/I/71ttogP-O3L._AC_UF894,1000_QL80_.jpg",
+   "title":"Bitter Gourd",
+   "image":"img/bitter-mel.jpg",
    "price":"12.99",
    "category":"Vegetable",
    "_id":"121239",
 },
 
+{
+   "title":"Bitter Gourd",
+   "image":"img/bitter-mel.jpg",
+   "price":"12.99",
+   "category":"Vegetable",
+   "_id":"121240",
+},
+
+{
+   "title":"Bitter Gourd",
+   "image":"img/bitter-mel.jpg",
+   "price":"12.99",
+   "category":"Vegetable",
+   "_id":"1212410",
+},
+{
+   "title":"Bitter Gourd",
+   "image":"img/bitter-mel.jpg",
+   "price":"12.99",
+   "category":"Vegetable",
+   "_id":"1212420",
+},
+{
+   "title":"Bitter Gourd",
+   "image":"img/bitter-mel.jpg",
+   "price":"12.99",
+   "category":"Vegetable",
+   "_id":"1212430",
+},
+{
+   "title":"Bitter Gourd",
+   "image":"img/bitter-mel.jpg",
+   "price":"12.99",
+   "category":"Vegetable",
+   "_id":"1212440",
+},
+{
+   "title":"Bitter Gourd",
+   "image":"img/bitter-mel.jpg",
+   "price":"12.99",
+   "category":"Vegetable",
+   "_id":"1212450",
+},
+{
+   "title":"Bitter Gourd",
+   "image":"img/bitter-mel.jpg",
+   "price":"12.99",
+   "category":"Vegetable",
+   "_id":"1212460",
+},
+{
+   "title":"Bitter Gourd",
+   "image":"img/bitter-mel.jpg",
+   "price":"12.99",
+   "category":"Vegetable",
+   "_id":"1212470",
+},
+{
+   "title":"Bitter Gourd",
+   "image":"img/bitter-mel.jpg",
+   "price":"12.99",
+   "category":"Vegetable",
+   "_id":"1212480",
+},
 ]
 
 class DataService{

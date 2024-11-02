@@ -37,10 +37,12 @@ function Catalog() {
       </h3>
 
       <div className="filters">
+        <button onClick={() => applyFilter()}
+        className="btn btn-sm btn-outline-light cat-chooser">All</button>
         {categories.map((cat) => (
           <button
             onClick={() => applyFilter(cat)}
-            className="btn btn-sm btn-outline-success"
+            className="btn btn-sm btn-outline-light cat-chooser"
           >
             {cat}
           </button>

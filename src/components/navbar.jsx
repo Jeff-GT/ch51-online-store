@@ -41,9 +41,9 @@ function Navbar() {
             <img src="./img/logo.png" alt="" width="30" height="24"></img>
             {/* <img src='https://i.imgur.com/Lq3AkL1.png' alt="" width="30" height="24"></img> */}
           </a>
-          <a className="navbar-brand nav-title-font" href="#">
+          <Link to="/home" className="navbar-brand nav-title-font" href="#">
             Jeff's Produce
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -85,10 +85,16 @@ function Navbar() {
                 placeholder="Search"
                 aria-label="Search"
               ></input>
-              <div className="btn btn-outline-light me-3">{user.name}</div>
-              
+              <div className="btn-group">
+                <button className="btn btn-outline-light me-3 cart-btn dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">{user.name}</button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+              </div>
                 <Link to="/cart">
-                <button type="button" className="right btn btn-primary position-relative">
+                <button type="button" className="right btn btn-outline-light position-relative cart-btn">
                   <img src="/img/cart.svg" alt="" />
                   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     {countProducts()}

@@ -17,28 +17,34 @@ function Cart(){
       return total.toFixed(2);
    }
 
+   
+
    return(
-      <div className="cart">
+      <div className="cart ">
          
          <h1> cart </h1>
-         <h5>We have {globalCart.length} Products on your cart</h5>
+         <h5>Please Review Your Cart</h5>
          
          <div className='parent'>
-            <div className='cart-prod'>
-               {console.log(globalCart )};
+
+            <div className='list'>
+               {console.log(globalCart )}
                {globalCart.map(prod => 
-               <div>
+               <div  className='cart-prod'>
                   <img src={prod.image}/>
                   <h4>{prod.title}</h4>
                   <label>${prod.price}</label>
-                  <label>#{prod.quantity}</label>
-                  <label>${prod.price * prod.quantity}</label>
+                  <label>Qty: {prod.quantity}</label>
+                  <label>Subtotal: ${(prod.price * prod.quantity).toFixed(2)}</label>
                   <button className='btn btn-sm btn-outline-danger'>Remove</button>
                </div>)}
             </div>
 
             <div className='side-menu'>
-               <h4>Total</h4>
+               <h4>Summary</h4>
+               <h5>Number of items:</h5>
+               <h2>{globalCart.length}</h2>
+               <h5>Total:</h5>
                <h2>${getTotal()}</h2>
             </div>
 
