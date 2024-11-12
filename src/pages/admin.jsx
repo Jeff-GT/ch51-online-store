@@ -1,3 +1,4 @@
+import DataService from "../services/dataService";
 import "./styles/admin.css";
 import { useState } from "react";
 
@@ -50,6 +51,13 @@ function Admin() {
   function saveProd(){
     
     console.log(product);
+
+    let service = new DataService();
+
+    let fixedProduct = {...product};
+    fixedProduct.price = parseFloat(fixedProduct.price);
+
+    service.saveProducts(fixedProduct);
   }
 
   return (
@@ -94,7 +102,7 @@ function Admin() {
             </div>
           </form>
 
-          <button className="btn btn-outline-dark">Save Product</button>
+          <button className="btn btn-outline-dark" onClick={saveProd}>Save Product</button>
         </div>
 
         <div className="coupons form-label">

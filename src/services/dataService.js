@@ -1,4 +1,4 @@
-
+import axios from 'axios';
 
 const catalog=[
 
@@ -6,7 +6,7 @@ const catalog=[
    "title":"Peach",
    "image": "img/peach-img.jpg",
    "price":"12.99",
-   "category":"East",
+   "category":"Fruit",
    "_id":"121231",
 },
 
@@ -139,11 +139,16 @@ const catalog=[
    "category":"Vegetable",
    "_id":"1212480",
 },
-]
+];
 
 class DataService{
-   getProducts(){
-      return catalog;
+   async getProducts(){
+      let response = await axios.get("http://127.0.0.1:5001/api/products");
+      return response.data;
+   }
+
+   async saveProducts(product){
+      let response = await axios.post("http://127.0.0.1:5001/api/products", product);
    }
 
    getCategories(){
